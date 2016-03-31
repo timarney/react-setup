@@ -1,7 +1,10 @@
-# React / Webpack (Testing)
+#React / Webpack (Testing)
 Baseline testing to optimize .js files for 'Production' use.  
 
 Note this isn't a React Starter boilerplate.  It's an experiment to test Webpack output pre-compression (gzip etc...)
+
+#Tips / Ideas?
+Feel free to send a pull request or add to the dicussion using Issues i.e -> https://github.com/timarney/react-setup/issues/1
 
 #Production Output
 ```
