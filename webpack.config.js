@@ -25,10 +25,18 @@ var config = {
     ]
   },
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js'),
-    new webpack.optimize.UglifyJsPlugin( {compress: {
-        warnings: false
-    }}),
+    new webpack.optimize.OccurenceOrderPlugin(true),
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+      output: {
+        comments: false
+      },
+      compress: {
+        warnings: false,
+        screw_ie8: true
+      }
+    }),
+    new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js')
   ]
 }
 
