@@ -6,7 +6,7 @@ Baseline testing to optimize js files for Production use
 +-- dist
 |   +-- bundle.js (546 bytes)
 |   +-- index.html (219 bytes)
-|   +-- vendors.js (190 KB)
+|   +-- vendors.js (189 KB) 👎
 ```
 
 #Build
