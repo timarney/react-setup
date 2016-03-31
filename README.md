@@ -1,5 +1,7 @@
 # React / Webpack (Testing)
-Baseline testing to optimize js files for Production use
+Baseline testing to optimize js files for 'Production' use.  
+
+Note this is not a React Starter boilerplate.  It's an experiment to test Webpack output pre-compression (gzip etc...)
 
 #Production Output
 ```
@@ -10,6 +12,6 @@ Baseline testing to optimize js files for Production use
 ```
 
 #Build
-npm run build (to output for production use)
+npm run build (output to production dir)
 
 
