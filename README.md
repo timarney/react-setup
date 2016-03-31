@@ -1,4 +1,4 @@
-#React / Webpack (Testing)
+#React for Production / Webpack (Testing)
 Baseline testing to optimize .js files for 'Production' use.  
 
 Note this isn't a React Starter boilerplate.  It's an experiment to test Webpack output pre-compression (gzip etc...)
@@ -16,5 +16,8 @@ Feel free to send a pull request or add to the dicussion using Issues i.e -> htt
 
 #Build
 npm run build (output to production dir)
+
+#What about GZIP sizes?
+Checkout http://minime.stephan-brumme.com/react/0.14.8/
 
 
