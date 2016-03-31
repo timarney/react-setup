@@ -1,7 +1,26 @@
-#React for Production / Webpack (Testing)
-Baseline testing to optimize .js files for 'Production' use.
+#TL;DR
 
-Note this isn't a React Starter boilerplate.  It's an experiment to test Webpack output pre-compression (gzip etc...)
+Do at least this 
+
+```
+new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': '"production"'
+      }
+    })
+```
+That's a 58 KB win.
+
+https://twitter.com/timarney/status/715614327911395328
+
+#What is this?
+I started this as an experiment to see **how big** React is for a production build via Webpack (without gzip etc...)
+
+React and React Dom are split out into a **vendors.js** file (standalone).
+
+
+*Note this isn't a React Starter boilerplate.*  It's an experiment to test Webpack settings
+
 
 #Tips / Ideas?
 Feel free to send a pull request or add to the dicussion using Issues i.e -> https://github.com/timarney/react-setup/issues/1
@@ -18,6 +37,6 @@ Feel free to send a pull request or add to the dicussion using Issues i.e -> htt
 npm run build (output to production dir)
 
 #What about GZIP sizes?
-Checkout http://minime.stephan-brumme.com/react/0.14.8/
+Checkout http://minime.stephan-brumme.com/react/0.14.8
 
 
