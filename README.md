@@ -1,5 +1,15 @@
-# React / Webpack
-Baseline testing to optimize js files for Production use.
+# React / Webpack (Testing)
+Baseline testing to optimize js files for Production use
 
-# build
+#Production Output
+```
++-- dist
+|   +-- bundle.js (546 bytes)
+|   +-- index.html (219 bytes)
+|   +-- vendors.js (190 KB)
+```
+
+#Build
 npm run build (to output for production use)
+
+
