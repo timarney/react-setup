@@ -1,5 +1,11 @@
-module.exports = {
-  entry: './src/main.js',
+var path = require('path')
+var webpack = require('webpack')
+
+var config = {
+  entry: {
+    app: path.resolve(__dirname, './src/main.js'),
+    vendors: ['react']
+  },
   output: {
     path: './src',
     filename: 'bundle.js'
@@ -17,5 +23,14 @@ module.exports = {
         loader: 'babel'
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js')
+  ]
 }
+
+if (process.env.NODE_ENV === 'production') {
+  config.output.path = path.join(__dirname, 'dist/')
+}
+
+module.exports = config
