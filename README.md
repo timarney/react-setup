@@ -9,7 +9,9 @@ new webpack.DefinePlugin({
       }
     })
 ```
-That's a 58 KB win.
+That's a 58 KB win -> because by default, React is in development mode.  
+
+Facebook also recommends UglifyJS to completely remove the extra code present in development mode.
 
 https://twitter.com/timarney/status/715614327911395328
 
@@ -19,7 +21,7 @@ I started this as an experiment to see **how big** React is for a production bui
 React and React Dom are split out into a **vendors.js** file (standalone).
 
 
-*Note this isn't a React Starter boilerplate.*  It's an experiment to test Webpack settings
+*Note this isn't a React Starter boilerplate.*  It's an experiment to test Webpack settings.
 
 
 #Tips / Ideas?
