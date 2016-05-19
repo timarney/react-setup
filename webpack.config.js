@@ -18,22 +18,18 @@ var config = {
   module: {
     loaders: [
       {
+        loader: 'babel-loader',
         test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'babel'
+        exclude: /node_modules/
       }
     ]
   },
   plugins: [
     new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.UglifyJsPlugin({
-      output: {
-        comments: false
-      },
-      compress: {
-        warnings: false,
-        screw_ie8: true
-      }
+    new webpack.LoaderOptionsPlugin({
+      minimize: true,
+      debug: false,
+      quiet: true
     }),
     new webpack.optimize.CommonsChunkPlugin({ name: 'vendors', filename: 'vendor.bundle.js' })
   ]
