@@ -9,7 +9,7 @@ new webpack.DefinePlugin({
       }
     })
 ```
-That's a 58 KB win -> because by default, React is in development mode.  
+That's a 65 KB win -> because by default, React is in development mode.
 
 Facebook also recommends UglifyJS to completely remove the extra code present in development mode.
 
@@ -30,13 +30,13 @@ Feel free to send a pull request or add to the dicussion using Issues i.e -> htt
 #Production Output
 ```
 +-- dist
-|   +-- bundle.js (546 bytes)
+|   +-- bundle.js (495 bytes)
 |   +-- index.html (219 bytes)
-|   +-- vendors.js (131 KB) 👍
+|   +-- vendors.js (140 kB) 👍
 ```
 
 #Build
 npm run build (output to production dir)
 
 #What about GZIP sizes?
-Checkout http://minime.stephan-brumme.com/react/0.14.8
+Checkout http://minime.stephan-brumme.com/react/15.0.2
