@@ -4,7 +4,7 @@ var webpack = require('webpack')
 var config = {
   entry: {
     app: path.resolve(__dirname, './src/main.js'),
-    vendors: ['react']
+    vendors: ['react','react-dom']
   },
   output: {
     path: './src',
@@ -47,11 +47,13 @@ if (process.env.NODE_ENV === 'production') {
   Note: by default, React will be in development mode
         see https://facebook.github.io/react/downloads.html
   */
+  /*
   config.plugins.push(new webpack.DefinePlugin({
     'process.env': {
       'NODE_ENV': '"production"'
     }
   }))
+  */
 }
 
 module.exports = config
