@@ -15,6 +15,9 @@ Facebook also recommends UglifyJS to completely remove the extra code present in
 
 https://twitter.com/timarney/status/715614327911395328
 
+#Note
+Check the Webpack 2 version here https://github.com/timarney/react-setup/tree/webpack2
+
 #What is this?
 I started this as an experiment to see **how big** React is for a production build via Webpack (without gzip etc...)
 
