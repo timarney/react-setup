@@ -29,7 +29,7 @@ var config = {
     new webpack.LoaderOptionsPlugin({
       minimize: true,
       debug: false,
-      quiet: true
+      comments: true
     }),
     new webpack.optimize.CommonsChunkPlugin({ name: 'vendors', filename: 'vendor.bundle.js' })
   ]
