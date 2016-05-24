@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "NODE_ENV=production webpack -p --progress && cp src/index.html dist/index.html"
+    "build": "NODE_ENV=production webpack --progress && cp src/index.html dist/index.html"
   },
   "author": "Tim Arney",
   "license": "MIT",
