@@ -1,7 +1,18 @@
-var path = require('path')
-var webpack = require('webpack')
+const path = require('path')
+const webpack = require('webpack')
 
-var config = {
+const Dedupe = new webpack.optimize.DedupePlugin()
+const UglifyJs = new webpack.optimize.UglifyJsPlugin({
+  compress: {
+    warnings: false,
+    screw_ie8: true
+  }
+})
+
+const CommonsChunk = new webpack.optimize.CommonsChunkPlugin({ name: 'vendors', filename: 'vendor.bundle.js' })
+const DefineENV = new webpack.DefinePlugin({ 'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development') })
+
+const config = {
   entry: {
     app: path.resolve(__dirname, './src/main.js'),
     vendors: ['react', 'react-dom']
@@ -25,14 +36,8 @@ var config = {
     ]
   },
   plugins: [
-    new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false,
-        screw_ie8: true
-      }
-    }),
-    new webpack.optimize.CommonsChunkPlugin({ name: 'vendors', filename: 'vendor.bundle.js' })
+    CommonsChunk,
+    DefineENV
   ]
 }
 
@@ -40,16 +45,8 @@ console.log('== using ' + process.env.NODE_ENV + ' env ==')
 
 if (process.env.NODE_ENV === 'production') {
   config.output.path = path.join(__dirname, 'dist/')
-
-  /*
-  Note: by default, React will be in development mode
-       see https://facebook.github.io/react/downloads.html
-  */
-  config.plugins.push(new webpack.DefinePlugin({
-    'process.env': {
-      'NODE_ENV': '"production"'
-    }
-  }))
+  /* only add these for production */
+  config.plugins.push(Dedupe, UglifyJs)
 }
 
 module.exports = config

@@ -1,10 +1,10 @@
 {
   "name": "react-setup",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "NODE_ENV=development webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "NODE_ENV=production webpack --progress && cp src/index.html dist/index.html"
   },
@@ -17,11 +17,10 @@
   "devDependencies": {
     "babel-core": "^6.9.0",
     "babel-loader": "^6.2.4",
-    "babel-preset-es2015": "^6.9.0",
     "babel-preset-es2015-native-modules": "^6.6.0",
     "babel-preset-react": "^6.5.0",
     "webpack": "^2.1.0-beta.7",
-    "webpack-dev-server": "^1.13.0"
+    "webpack-dev-server": "2.1.0-beta.0"
   },
   "repository": {
     "type": "git",
