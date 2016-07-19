@@ -37,7 +37,7 @@ var config = {
   ]
 }
 
-if (process.env.NODE_ENV === 'production1') {
+if (process.env.NODE_ENV === 'production') {
   config.output.path = path.join(__dirname, 'dist/')
 
   /*
