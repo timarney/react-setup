@@ -1,3 +1,6 @@
+#Update
+This information is still relevant but, just use -> Create React App (get back to coding) it handles all of this for you. https://github.com/facebookincubator/create-react-app.  
+
 #TL;DR
 
 Do at least this
